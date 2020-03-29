@@ -4,8 +4,8 @@ JWT - Jason Web Token
 
 Authorization Stratergies 
 
-- Session Token
-- JWT
+- Session Token - Reference Tokens
+- JWT - Value Tokens. Contains complete Information with Signature. 
 
 1. Http being Stateless wont remember what is previous request is. What are the implications.
 2. Rendering any page from web server - send URL and who am i. Each request needs this information.
@@ -34,7 +34,20 @@ Authorization Stratergies
    
    Encoded section -  --->  Header | PAYLOAD | SIGNATURE 
    
+   Role of Signature is trust worthy. Verify Signature and allow every time.
+   
+   1. How signature is created.
+   2. What is the Role of header and Payload while creating digital signature.
+   3. if you change value, how signature becomes invalid.
+   4. where we maintain secret Key which will be used while generating the JWT and also same thing is used to verify signature.
+   5. what is the Role of Server in this. What implementation they needs to have.
+   
+   
    Understand this section and then look at the code that is built for this. 
+   
+   While doing this if you have questions : 
+   
+   https://ponyfoo.com/articles/json-web-tokens-vs-session-cookies - Read this. Answers many Queries. A Nice article which explains many WHY's. 
    
    6. Some short comings in JWT 
 
